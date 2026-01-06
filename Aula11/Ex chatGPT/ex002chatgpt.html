@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar numeros</title>
+</head>
+<body>
+    Digite um número: <input type="text" name="txtvalor" id="txtvalor">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var numero = window.document.getElementById('txtvalor')
+            var res = window.document.querySelector('div#res')
+            var num = Number(numero.value)
+          if (num >= 0){
+            res.innerHTML = `O número <strong>${num}</strong> que você digitou é POSITIVO!`
+            }else {
+                res.innerHTML = `O número <strong>${num}</strong> que você digitou é NEGATIVO!`
+            }
+        }
+    </script>
+    
+</body>
+</html>

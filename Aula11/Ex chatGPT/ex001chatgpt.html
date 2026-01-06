@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar hora do dia</title>
+</head>
+<body>
+    Horario atual:<input type="text" name="hora" id="hora">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+        var horaA = window.document.getElementById('hora')
+        var res = window.document.querySelector('div#res')
+        var atual = Number.parseFloat(horaA.value)
+        if (atual < 12) {
+            res.innerHTML = `São exatamente <strong>${atual}</strong> horas, Tenha um bom dia!`
+        }else {
+            res.innerHTML = `São exatamente <strong>${atual}</strong> horas, tenha uma boa tarde!`
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de origem!</title>
+</head>
+<body>
+    <h1>Sistemas de Pais</h1>
+    Pais de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="pais"></div>
+    <script>
+        function verificar() {
+        var txtp = window.document.getElementById('txtpais')
+        var res = window.document.querySelector('div#pais')
+        var pais = String(txtp.value)
+        if (pais == 'Brasil'){
+           res.innerHTML = `<p> Você é do pais <string>${pais}</string>, você é BRASILEIRO!`
+        }else {
+            res.innerHTML = `<p>Voce é do pais <string>${pais}</string>, Você é ESTRANGEIRO!`
+        }
+        }   
+    </script>
+</body>
+</html>

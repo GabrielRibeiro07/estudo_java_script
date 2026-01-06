@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar idade da criança</title>
+</head>
+<body>
+    Digite sua idade: <input type="text" name="txtidade" id="txtidade">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txti = document.getElementById('txtidade')
+            var res = document.querySelector('div#res')
+            var idade = Number(txti.value)
+            if (idade <=12) {
+                res.innerHTML = `<p>Você tem <strong>${idade}</strong> anos de idade, Considerado <strong>"CRIANÇA!"</strong>`
+            } else if (idade <= 17) {
+                res.innerHTML = `<p>Você tem <strong>${idade}</strong> anos de idade, Considerado <strong>"ADOLESCENTE!"</strong>`
+            } else if (idade <= 65) {
+                res.innerHTML = `<p>Você tem <strong>${idade}</strong> anos de idade, Considerado <strong>"ADULTO!"</strong>`
+            } else {
+                res.innerHTML = `<p>Você tem <strong>${idade}</strong> anos de idade, Considerado <strong>"IDOSO!"</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

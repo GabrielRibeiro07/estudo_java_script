@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de votos</title>
+</head>
+<body>
+    Digite sua idade para verificar em nosso sistema se você pode votar: <input type="text" name="txtidade" id="txtidade">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var idade = window.document.getElementById('txtidade')
+            var res = window.document.querySelector('div#res')
+            var idadeVotar = Number(idade.value)
+            if (idadeVotar >= 16) {
+                res.innerHTML = `Sua idade é de <strong>${idadeVotar}</strong>, você pode VOTAR!`
+            } else {
+                res.innerHTML = `Você tem <strong>${idadeVotar}</strong>, Não pode VOTAR!`
+            }
+
+        }
+    </script> 
+</body>
+</html>
